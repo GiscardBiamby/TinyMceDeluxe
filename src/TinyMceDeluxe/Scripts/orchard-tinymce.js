@@ -11,8 +11,8 @@
 //    theme_advanced_buttons2: "mediapicker,|,tablecontrols,|,hr,removeformat,visualaid,|,visualchars,template,blockquote,pagebreak",
 //    theme_advanced_buttons3: "",
 //    convert_urls: false,
-//    content_css: "/Themes/GETheme/Styles/ge-main.css",
-//    template_external_list_url : "/Modules/gradedge/Scripts/tinymce_template_list.js",
+//    template_external_list_url : "/Modules/MyModule/Scripts/tinymce_template_list.js",
+//    content_css: "/Themes/MyTheme/Styles/ge-main.css",
 //    valid_elements: "*[*]",
 //    // shouldn't be needed due to the valid_elements setting, but TinyMCE would strip script.src without it.
 //    extended_valid_elements: "script[type|defer|src|language]"
