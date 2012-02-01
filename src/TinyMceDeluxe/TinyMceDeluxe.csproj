@@ -235,7 +235,6 @@
     <Content Include="Scripts\plugins\xhtmlxtras\js\element_common.js" />
     <Content Include="Scripts\plugins\xhtmlxtras\js\ins.js" />
     <Content Include="Scripts\plugins\xhtmlxtras\langs\en_dlg.js" />
-    <Content Include="Scripts\external-plugin-loader.js" />
     <Content Include="Scripts\samples\templates\two-col.htm" />
     <Content Include="Scripts\samples\tinymce_template_list.js" />
     <Content Include="Scripts\themes\advanced\about.htm" />
@@ -324,10 +323,7 @@
   <ItemGroup>
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
