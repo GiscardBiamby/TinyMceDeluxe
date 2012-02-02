@@ -39,7 +39,8 @@
 //tinymce.PluginManager.load('xhtmlxtras', '/Modules/TinyMceDeluxe/Scripts/plugins/xhtmlxtras/editor_plugin.js');
 
 ////
-//// list the plug-ins you want to use in the plugins: property (and make sure to prefix them with a dash; e.g. to load template plugin you would do: plugins: "-template", 
+//// list the plug-ins you want to use in the plugins: property (and make sure to prefix them with a dash; e.g. to load template plugin you would do: plugins: "-template",
+//// update the value of the content_css: property to point to your site's .css file. TinyMce will load the styles from that file into a droplist in the TinyMce editor, so your content editors can apply them. 
 //tinyMCE.init({
 //    theme: "advanced",
 //    mode: "specific_textareas",
