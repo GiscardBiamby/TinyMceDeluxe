@@ -196,8 +196,6 @@
     <Content Include="Scripts\plugins\example\js\dialog.js" />
     <Content Include="Scripts\plugins\example\langs\en.js" />
     <Content Include="Scripts\plugins\example\langs\en_dlg.js" />
-    <Content Include="Scripts\plugins\example\_dependency\editor_plugin.js" />
-    <Content Include="Scripts\plugins\example\_dependency\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\fullpage\css\fullpage.css" />
     <Content Include="Scripts\plugins\fullpage\editor_plugin.js" />
     <Content Include="Scripts\plugins\fullpage\editor_plugin_src.js" />
