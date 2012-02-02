@@ -45,7 +45,7 @@
 //    theme: "advanced",
 //    mode: "specific_textareas",
 //    editor_selector: "tinymce",
-//    plugins: "fullscreen,searchreplace,mediapicker,-table,-pagebreak,-template",
+//    plugins: "fullscreen,autoresize,searchreplace,mediapicker,-table,-pagebreak,-template",
 //    theme_advanced_toolbar_location: "top",
 //    theme_advanced_toolbar_align: "left",
 //    theme_advanced_statusbar_location: "bottom",
