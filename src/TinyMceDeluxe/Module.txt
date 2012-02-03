@@ -2,7 +2,7 @@ Name: TinyMceDeluxe
 AntiForgery: enabled
 Author: Giscard Biamby
 Website: http://tinymcedeluxe.codeplex.com
-Version: 0.1.2
+Version: 0.1.3
 OrchardVersion: 1.3.10
 Description: Add-on to Orchard's built-in TinyMce module. This module allows you to use all the TinyMce plugins available in the TinyMce "Full Package" download (http://www.tinymce.com/download/custom_package.php). 
 FeatureDescription: Foo
