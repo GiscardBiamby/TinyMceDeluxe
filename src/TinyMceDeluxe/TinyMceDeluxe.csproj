@@ -397,7 +397,7 @@
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\classes\firebug\FIREBUG.LICENSE" />
+    <Content Include="Scripts\classes\firebug\FIREBUG.LICENSE" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
