@@ -78,6 +78,15 @@
     <Content Include="Scripts\plugins\searchreplace\js\searchreplace.js" />
     <Content Include="Scripts\plugins\searchreplace\langs\en_dlg.js" />
     <Content Include="Scripts\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Scripts\plugins\syntaxhl\dialog.htm" />
+    <Content Include="Scripts\plugins\syntaxhl\editor_plugin.js" />
+    <Content Include="Scripts\plugins\syntaxhl\editor_plugin_src.js" />
+    <Content Include="Scripts\plugins\syntaxhl\img\highlight.gif" />
+    <Content Include="Scripts\plugins\syntaxhl\js\dialog.js" />
+    <Content Include="Scripts\plugins\syntaxhl\langs\en.js" />
+    <Content Include="Scripts\plugins\syntaxhl\langs\en_dlg.js" />
+    <Content Include="Scripts\plugins\syntaxhl\langs\zh.js" />
+    <Content Include="Scripts\plugins\syntaxhl\langs\zh_dlg.js" />
     <Content Include="Scripts\plugins\visualblocks\css\visualblocks.css" />
     <Content Include="Scripts\plugins\visualblocks\editor_plugin.js" />
     <Content Include="Scripts\plugins\visualblocks\editor_plugin_src.js" />
@@ -344,6 +353,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Body-Html.Editor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\plugins\syntaxhl\README" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
