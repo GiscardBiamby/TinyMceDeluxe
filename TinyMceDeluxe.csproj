@@ -62,6 +62,7 @@
   <ItemGroup>
     <Content Include="Scripts\langs\en.js" />
     <Content Include="Scripts\license.txt" />
+    <Content Include="Scripts\orchard-tinymce.js" />
     <Content Include="Scripts\plugins\autoresize\editor_plugin.js" />
     <Content Include="Scripts\plugins\autoresize\editor_plugin_src.js" />
     <Content Include="Scripts\plugins\example_dependency\editor_plugin.js" />
