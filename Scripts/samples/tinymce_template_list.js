@@ -4,5 +4,5 @@
 
 var tinyMCETemplateList = [
 // Name, URL, Description
-	["Two Columns", "/Modules/TinyMceDeluxe/Scripts/samples/templates/two-col.htm", "HTML Layout."]
+	["Two Columns", "/modules/tinymcedeluxe/scripts/samples/templates/two-col.htm", "HTML Layout."]
 ];
