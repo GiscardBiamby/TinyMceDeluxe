@@ -39,6 +39,8 @@ tinymce.PluginManager.load('template', '/modules/tinymcedeluxe/scripts/plugins/t
 ////tinymce.PluginManager.load('visualchars', '/modules/tinymcedeluxe/scripts/plugins/visualchars/editor_plugin.js');
 ////tinymce.PluginManager.load('wordcount', '/modules/tinymcedeluxe/scripts/plugins/wordcount/editor_plugin.js');
 ////tinymce.PluginManager.load('xhtmlxtras', '/modules/tinymcedeluxe/scripts/plugins/xhtmlxtras/editor_plugin.js');
+tinymce.PluginManager.load('syntaxhl', '/modules/tinymcedeluxe/scripts/plugins/syntaxhl/editor_plugin.js');
+
 
 ////
 ////
@@ -51,12 +53,12 @@ tinyMCE.init({
     theme: "advanced",
     mode: "specific_textareas",
     editor_selector: "tinymce",
-    plugins: "fullscreen,autoresize,searchreplace,mediapicker,inlinepopups,-table,-pagebreak,-template,-paste",
+    plugins: "fullscreen,autoresize,searchreplace,mediapicker,inlinepopups,-table,-pagebreak,-template,-paste,-syntaxhl",
     theme_advanced_toolbar_location: "top",
     theme_advanced_toolbar_align: "left",
     theme_advanced_statusbar_location: "bottom",
     theme_advanced_resizing: "true",
-    theme_advanced_buttons1: "search,replace,|,cut,copy,paste,|,undo,redo,|,link,unlink,charmap,emoticon,codeblock,|,bold,italic,|,numlist,bullist,formatselect,|,styleselect,|,code,fullscreen",
+    theme_advanced_buttons1: "search,replace,|,cut,copy,paste,|,undo,redo,|,link,unlink,charmap,emoticon,codeblock,|,bold,italic,|,numlist,bullist,formatselect,|,styleselect,|,syntaxhl,code,fullscreen",
     theme_advanced_buttons2: "mediapicker,|,tablecontrols,|,hr,removeformat,visualaid,|,visualchars,template,blockquote,pagebreak",
     theme_advanced_buttons3: "",
     convert_urls: false,
