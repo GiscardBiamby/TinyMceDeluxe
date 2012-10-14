@@ -5,9 +5,8 @@
 @using Orchard.Themes.ViewModels
 @{ 
     Script.Require("OrchardTinyMceDeluxe");
-    var pluginsBaseUrl = @Url.Content("~/modules/tinymcedeluxe/scripts/plugins");
-}
-@{
+    var pluginsBaseUrl = Url.Content("~/modules/tinymcedeluxe/scripts/plugins");
+
     var siteThemeService = WorkContext.Resolve<ISiteThemeService>();
     var themeName = siteThemeService.GetSiteTheme().Name;
     var themeCssPath = @Url.Content("~/themes/"+themeName+"/styles/custom.css");
@@ -19,7 +18,7 @@
 		{"data-mediapicker-title",T("Insert/Update Media")},
         {"style", "width:100%"}
 	 })
-
+<!-- Don't use this yet. It will probably fail on pages that have more than one textarea using TinyMce. In most cases this isn't an issue.  -->
 @using (Script.Foot()) {
 <script type="text/javascript">
     $(document).ready(function () {
