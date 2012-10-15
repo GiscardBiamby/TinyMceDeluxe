@@ -7,14 +7,20 @@
 namespace 'TinyMceDeluxe', (exports) -> 
     exports.Orchard = class 
         
-        constructor: (@pluginsBaseUrl) -> 
+        ThemePath: ''
+        
+        PluginBaseUrl: ''
+
+        constructor: () -> 
 
         init: (plugins, options) -> 
             @loadPlugins(plugins)
+            if !options.content_css? && TinyMceDeluxe.Orchard.ThemePath>''
+                options.content_css = TinyMceDeluxe.Orchard.ThemePath
+            console.log 'content_css: ' + options.content_css
             tinyMCE.init options
 
         loadPlugins: (plugins)-> 
-            baseUrl = @pluginsBaseUrl
+            baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl
             (tinymce.PluginManager.load plugin, baseUrl.concat('/').concat(plugin).concat('/editor_plugin.js')) for plugin in plugins 
             return
-            

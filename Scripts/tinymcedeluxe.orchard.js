@@ -18,18 +18,24 @@
   namespace('TinyMceDeluxe', function(exports) {
     return exports.Orchard = (function() {
 
-      function _Class(pluginsBaseUrl) {
-        this.pluginsBaseUrl = pluginsBaseUrl;
-      }
+      _Class.prototype.ThemePath = '';
+
+      _Class.prototype.PluginBaseUrl = '';
+
+      function _Class() {}
 
       _Class.prototype.init = function(plugins, options) {
         this.loadPlugins(plugins);
+        if (!(options.content_css != null) && TinyMceDeluxe.Orchard.ThemePath > '') {
+          options.content_css = TinyMceDeluxe.Orchard.ThemePath;
+        }
+        console.log('content_css: ' + options.content_css);
         return tinyMCE.init(options);
       };
 
       _Class.prototype.loadPlugins = function(plugins) {
         var baseUrl, plugin, _i, _len;
-        baseUrl = this.pluginsBaseUrl;
+        baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl;
         for (_i = 0, _len = plugins.length; _i < _len; _i++) {
           plugin = plugins[_i];
           tinymce.PluginManager.load(plugin, baseUrl.concat('/').concat(plugin).concat('/editor_plugin.js'));
