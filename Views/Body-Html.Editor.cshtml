@@ -9,7 +9,7 @@
 
     var siteThemeService = WorkContext.Resolve<ISiteThemeService>();
     var themeName = siteThemeService.GetSiteTheme().Name;
-    var themeCssPath = @Url.Content("~/themes/"+themeName+"/styles/custom.css");
+    var themeCssPath = Url.Content("~/themes/"+themeName+"/styles/custom.css");
 }
 @Html.TextArea("Text", (string)Model.Text, 25, 80,
 	 new Dictionary<string,object> {
