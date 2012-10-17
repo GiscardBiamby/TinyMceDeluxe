@@ -29,7 +29,6 @@
         if (!(options.content_css != null) && TinyMceDeluxe.Orchard.ThemePath > '') {
           options.content_css = TinyMceDeluxe.Orchard.ThemePath;
         }
-        console.log('content_css: ' + options.content_css);
         return tinyMCE.init(options);
       };
 

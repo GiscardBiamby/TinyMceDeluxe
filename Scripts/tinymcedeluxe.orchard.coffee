@@ -17,7 +17,7 @@ namespace 'TinyMceDeluxe', (exports) ->
             @loadPlugins(plugins)
             if !options.content_css? && TinyMceDeluxe.Orchard.ThemePath>''
                 options.content_css = TinyMceDeluxe.Orchard.ThemePath
-            console.log 'content_css: ' + options.content_css
+            ##console.log 'content_css: ' + options.content_css
             tinyMCE.init options
 
         loadPlugins: (plugins)-> 
