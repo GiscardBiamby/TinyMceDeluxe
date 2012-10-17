@@ -27,7 +27,8 @@
         // Set up hook for dependent modules to customize the tinyMce editor options: 
         $(document).triggerHandler({
             type: "setupEditor.TinyMceDeluxe",
-            options: options
+            options: options, 
+            pluginsList: pluginsList
         });
 
         tinyMceDeluxe = new TinyMceDeluxe.Orchard();
