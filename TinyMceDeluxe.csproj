@@ -328,6 +328,9 @@
     <Content Include="Scripts\tinymcedeluxe.orchard.js">
       <DependentUpon>tinymcedeluxe.orchard.coffee</DependentUpon>
     </Content>
+    <Content Include="Scripts\tinymcedeluxe.orchard.min.js">
+      <DependentUpon>tinymcedeluxe.orchard.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\tiny_mce.js" />
     <Content Include="Scripts\tiny_mce_popup.js" />
     <Content Include="Scripts\tiny_mce_src.js" />
@@ -366,7 +369,7 @@
     <None Include="Scripts\plugins\syntaxhl\README" />
     <None Include="Scripts\tinymcedeluxe.orchard.coffee">
       <Compile>True</Compile>
-      <Minify>False</Minify>
+      <Minify>True</Minify>
       <Bare>False</Bare>
       <Iced>False</Iced>
     </None>

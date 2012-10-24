@@ -25,29 +25,38 @@
       function _Class() {}
 
       _Class.prototype.init = function(plugins, options) {
-        this.loadPlugins(plugins);
+        var baseUrl;
         if (!(options.content_css != null) && TinyMceDeluxe.Orchard.ThemePath > '') {
           options.content_css = TinyMceDeluxe.Orchard.ThemePath;
         }
+        baseUrl = '';
+        if ((TinyMceDeluxe.Orchard.PluginBaseUrl != null) && TinyMceDeluxe.Orchard.PluginBaseUrl > '') {
+          baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl;
+        } else {
+          baseUrl = this.detectBasePath();
+        }
+        tinyMCE.baseURL = baseUrl;
+        this.loadPlugins(baseUrl, plugins);
         return tinyMCE.init(options);
       };
 
-      _Class.prototype.loadPlugins = function(plugins) {
-        var baseUrl, plugin, _i, _len;
-        baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl;
-        if (!(TinyMceDeluxe.Orchard.PluginBaseUrl != null)) {
-          baseUrl = this.detectPluginPath();
-        }
+      _Class.prototype.loadPlugins = function(baseUrl, plugins) {
+        var plugin, _i, _len;
         for (_i = 0, _len = plugins.length; _i < _len; _i++) {
           plugin = plugins[_i];
-          tinymce.PluginManager.load(plugin, baseUrl.concat('/').concat(plugin).concat('/editor_plugin.js'));
+          tinymce.PluginManager.load(plugin, baseUrl.concat('/plugins/').concat(plugin).concat('/editor_plugin.js'));
         }
       };
 
-      _Class.prototype.detectPluginPath = function() {
-        var mceDeluxePath;
-        mceDeluxePath = $('script[src*="tinymcedeluxe.orchard.js"]').first().attr('src');
-        return mceDeluxePath.replace('tinymcedeluxe.orchard.js', 'plugins');
+      _Class.prototype.detectBasePath = function() {
+        var mceDeluxe, path;
+        mceDeluxe = $('script[src*="tinymcedeluxe.orchard.js"], script[src*="tinymcedeluxe.orchard.min.js"]');
+        if (mceDeluxe != null) {
+          path = mceDeluxe.first().attr('src');
+          path = path.replace('/tinymcedeluxe.orchard.js', '');
+          path = path.replace('/tinymcedeluxe.orchard.min.js', '');
+          return path;
+        }
       };
 
       return _Class;

@@ -4,7 +4,7 @@
 @using Orchard.Themes.ViewModels
 @{ 
     Script.Require("OrchardTinyMceDeluxe");
-    var pluginsBaseUrl = Url.Content("~/modules/tinymcedeluxe/scripts/plugins");
+    var pluginsBaseUrl = Url.Content("~/modules/tinymcedeluxe/scripts");
 
     var siteThemeService = WorkContext.Resolve<ISiteThemeService>();
     var themeLocation = siteThemeService.GetSiteTheme().Path;
@@ -31,6 +31,7 @@
 }
 
 @*
+// If using Combinator, and have COmbinator enabled for the dashboardk you might need this exclude setting: tinymcedeluxe\.orchard\.js|tinymcedeluxe\.orchard\.min\.js
 ////
 //// Customizing the TinyMce editor via TinyMceDeluxe:
 

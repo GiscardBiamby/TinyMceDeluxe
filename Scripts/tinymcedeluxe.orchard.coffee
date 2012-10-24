@@ -11,21 +11,31 @@ namespace 'TinyMceDeluxe', (exports) ->
         
         PluginBaseUrl: ''
 
-        constructor: () -> 
+        constructor: () ->
 
         init: (plugins, options) -> 
-            @loadPlugins(plugins)
             if !options.content_css? && TinyMceDeluxe.Orchard.ThemePath>''
                 options.content_css = TinyMceDeluxe.Orchard.ThemePath
-            ##console.log 'content_css: ' + options.content_css
+            
+            baseUrl = ''
+            
+            if (TinyMceDeluxe.Orchard.PluginBaseUrl? &&  TinyMceDeluxe.Orchard.PluginBaseUrl>'')
+                baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl
+            else 
+                baseUrl = @detectBasePath() 
+            
+            tinyMCE.baseURL = baseUrl
+            @loadPlugins baseUrl, plugins
             tinyMCE.init options
 
-        loadPlugins: (plugins) ->
-            baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl
-            baseUrl = @detectPluginPath() if !TinyMceDeluxe.Orchard.PluginBaseUrl?
-            (tinymce.PluginManager.load plugin, baseUrl.concat('/').concat(plugin).concat('/editor_plugin.js')) for plugin in plugins 
+        loadPlugins: (baseUrl, plugins) ->
+            (tinymce.PluginManager.load plugin, baseUrl.concat('/plugins/').concat(plugin).concat('/editor_plugin.js')) for plugin in plugins 
             return
          
-        detectPluginPath:() ->
-            mceDeluxePath = $('script[src*="tinymcedeluxe.orchard.js"]').first().attr 'src'
-            return mceDeluxePath.replace 'tinymcedeluxe.orchard.js', 'plugins'
+        detectBasePath:() ->
+            mceDeluxe = $('script[src*="tinymcedeluxe.orchard.js"], script[src*="tinymcedeluxe.orchard.min.js"]')
+            if mceDeluxe?
+                path = mceDeluxe.first().attr 'src'
+                path = path.replace '/tinymcedeluxe.orchard.js', ''
+                path = path.replace '/tinymcedeluxe.orchard.min.js', ''
+                return path
