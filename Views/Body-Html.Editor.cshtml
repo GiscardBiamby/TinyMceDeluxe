@@ -1,5 +1,4 @@
-﻿
-@using Orchard.Themes.Models
+﻿@using Orchard.Themes.Models
 @using Orchard.Themes.Preview
 @using Orchard.Themes.Services
 @using Orchard.Themes.ViewModels
@@ -9,7 +8,7 @@
 
     var siteThemeService = WorkContext.Resolve<ISiteThemeService>();
     var themeLocation = siteThemeService.GetSiteTheme().Path;
-    var themeCssPath = Url.Content("~/themes/" + themeLocation + "/styles/custom.css");
+    var themeCssPath = Url.Content("~/themes/" + themeLocation + "/styles/site.css");
 }
 @Html.TextArea("Text", (string)Model.Text, 25, 80,
 	 new Dictionary<string,object> {

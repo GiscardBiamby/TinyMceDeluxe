@@ -325,6 +325,9 @@
     <Content Include="Scripts\themes\simple\skins\o2k7\content.css" />
     <Content Include="Scripts\themes\simple\skins\o2k7\img\button_bg.png" />
     <Content Include="Scripts\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Scripts\tinymcedeluxe.orchard.js">
+      <DependentUpon>tinymcedeluxe.orchard.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\tiny_mce.js" />
     <Content Include="Scripts\tiny_mce_popup.js" />
     <Content Include="Scripts\tiny_mce_src.js" />
