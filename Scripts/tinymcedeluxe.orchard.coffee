@@ -20,7 +20,12 @@ namespace 'TinyMceDeluxe', (exports) ->
             ##console.log 'content_css: ' + options.content_css
             tinyMCE.init options
 
-        loadPlugins: (plugins)-> 
+        loadPlugins: (plugins) ->
             baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl
+            baseUrl = @detectPluginPath() if !TinyMceDeluxe.Orchard.PluginBaseUrl?
             (tinymce.PluginManager.load plugin, baseUrl.concat('/').concat(plugin).concat('/editor_plugin.js')) for plugin in plugins 
             return
+         
+        detectPluginPath:() ->
+            mceDeluxePath = $('script[src*="tinymcedeluxe.orchard.js"]').first().attr 'src'
+            return mceDeluxePath.replace 'tinymcedeluxe.orchard.js', 'plugins'

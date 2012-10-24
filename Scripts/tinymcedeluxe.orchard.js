@@ -35,10 +35,19 @@
       _Class.prototype.loadPlugins = function(plugins) {
         var baseUrl, plugin, _i, _len;
         baseUrl = TinyMceDeluxe.Orchard.PluginBaseUrl;
+        if (!(TinyMceDeluxe.Orchard.PluginBaseUrl != null)) {
+          baseUrl = this.detectPluginPath();
+        }
         for (_i = 0, _len = plugins.length; _i < _len; _i++) {
           plugin = plugins[_i];
           tinymce.PluginManager.load(plugin, baseUrl.concat('/').concat(plugin).concat('/editor_plugin.js'));
         }
+      };
+
+      _Class.prototype.detectPluginPath = function() {
+        var mceDeluxePath;
+        mceDeluxePath = $('script[src*="tinymcedeluxe.orchard.js"]').first().attr('src');
+        return mceDeluxePath.replace('tinymcedeluxe.orchard.js', 'plugins');
       };
 
       return _Class;
