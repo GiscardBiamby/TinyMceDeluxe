@@ -366,13 +366,13 @@
     <Content Include="Views\Body-Html.Editor.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\plugins\syntaxhl\README" />
-    <None Include="Scripts\tinymcedeluxe.orchard.coffee">
+    <Content Include="Scripts\plugins\syntaxhl\README" />
+    <Content Include="Scripts\tinymcedeluxe.orchard.coffee">
       <Compile>True</Compile>
       <Minify>True</Minify>
       <Bare>False</Bare>
       <Iced>False</Iced>
-    </None>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
